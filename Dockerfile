@@ -31,7 +31,7 @@ ENV VITE_BASE_URL=$VITE_BASE_URL \
     VITE_SENTRY_ENVIRONMENT=$VITE_SENTRY_ENVIRONMENT
 RUN npm run build && node scripts/security-headers.mjs > security-headers.conf
 
-FROM nginx:1.29-alpine
+FROM nginx:1.31-alpine
 
 RUN rm -f /etc/nginx/conf.d/default.conf
 COPY nginx.conf /etc/nginx/conf.d/default.conf
