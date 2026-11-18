@@ -1,0 +1,20 @@
+.schema-form-alert {
+  margin-bottom: 24px;
+}
+
+.schema-form-actions {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.schema-form h3 {
+  text-align: center;
+}
+
+.schema-form-honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

@@ -1,0 +1,11 @@
+import react from '@vitejs/plugin-react-swc';
+import { defineConfig } from 'vite';
+
+import pkg from './package.json';
+
+export default defineConfig({
+  plugins: [react()],
+  define: {
+    __APP_VERSION__: JSON.stringify(pkg.version),
+  },
+});

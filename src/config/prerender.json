@@ -1,0 +1,12 @@
+{
+  "pages": [
+    { "path": "/", "seo": "home" },
+    { "path": "/examples", "seo": "examples" },
+    { "path": "/examples/data", "seo": "exampleData" },
+    { "path": "/examples/landing", "seo": "exampleLanding" },
+    { "path": "/examples/contact", "seo": "contact" },
+    { "path": "/privacy", "seo": "privacy" },
+    { "path": "/terms", "seo": "terms" },
+    { "path": "/cookies", "seo": "cookies" }
+  ]
+}

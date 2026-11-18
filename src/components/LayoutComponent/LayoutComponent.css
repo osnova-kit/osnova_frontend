@@ -1,0 +1,220 @@
+.app-shell {
+  min-height: 100vh;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 64px;
+  padding: 0 24px;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.app-header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+  min-width: 0;
+}
+
+.app-brand {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.app-brand:hover {
+  color: var(--color-primary);
+}
+
+.app-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.app-menu-trigger {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  color: var(--color-text) !important;
+}
+
+.app-profile-trigger {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 10px;
+  color: var(--color-text) !important;
+  background: transparent !important;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.app-profile-trigger:hover {
+  background: var(--color-fill) !important;
+  color: var(--color-primary) !important;
+}
+
+.app-header-actions .language-switcher {
+  height: 40px;
+  border-radius: 10px;
+  color: var(--color-text) !important;
+}
+
+.app-header-actions .language-switcher:hover {
+  background: var(--color-fill) !important;
+  color: var(--color-primary) !important;
+}
+
+.app-nav-top {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border-bottom: none;
+  line-height: 62px;
+}
+
+.app-nav-top .ant-menu-item {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.app-nav-top .ant-menu-item:hover {
+  color: var(--color-primary);
+}
+
+.app-nav-top .ant-menu-item-selected {
+  color: var(--color-primary) !important;
+}
+
+.app-nav-top .ant-menu-item-selected::after {
+  border-bottom-color: var(--color-primary) !important;
+}
+
+.app-body {
+  flex: 1;
+}
+
+/* Content and footer column; min-width lets wide tables scroll instead of widening the page */
+.app-main {
+  min-width: 0;
+}
+
+.app-sider {
+  position: sticky !important;
+  top: 64px;
+  height: calc(100vh - 64px);
+  overflow-y: auto;
+}
+
+.app-sider-inner {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding-top: 8px;
+}
+
+.app-sider-inner .app-nav-sider {
+  flex: 1;
+}
+
+.app-sider-toggle {
+  align-self: flex-end;
+  width: 40px;
+  height: 40px;
+  margin: 8px 12px;
+  color: var(--color-text-secondary) !important;
+}
+
+.app-sider-right .app-sider-toggle,
+.ant-layout-sider-collapsed .app-sider-toggle {
+  align-self: center;
+}
+
+.app-sider-toggle:hover {
+  color: var(--color-primary) !important;
+}
+
+.app-sider-left {
+  border-right: 1px solid var(--color-border);
+}
+
+.app-sider-right {
+  border-left: 1px solid var(--color-border);
+}
+
+.app-nav-sider {
+  background: transparent;
+  border-inline-end: none !important;
+}
+
+.app-nav-sider .ant-menu-item,
+.app-nav-sider .ant-menu-submenu-title {
+  width: calc(100% - 16px);
+  margin-inline: 8px;
+  border-radius: 8px;
+}
+
+.app-content {
+  padding: 24px;
+  min-height: calc(100vh - 64px - 70px);
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 24px;
+  text-align: center;
+  padding: 16px 24px;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+}
+
+.footer-links {
+  font-style: normal;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 16px;
+}
+
+.footer-links a {
+  color: inherit;
+}
+
+.footer-links a:hover {
+  color: var(--color-primary);
+}
+
+@media (max-width: 767px) {
+  .app-header {
+    gap: 8px;
+    padding: 0 12px;
+  }
+
+  .app-header-left,
+  .app-header-actions {
+    gap: 8px;
+  }
+
+  .app-brand {
+    font-size: 1rem;
+  }
+}
